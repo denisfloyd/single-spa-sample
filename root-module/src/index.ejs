@@ -32,7 +32,10 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+        "react": "https://unpkg.com/react@16/umd/react.production.min.js",
+        "react-dom": "https://unpkg.com/react-dom@16/umd/react-dom.production.min.js",
+        "react-router-dom": "https://unpkg.com/react-router-dom@5.2.0/umd/react-router-dom.min.js"
       }
     }
   </script>
@@ -45,7 +48,8 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "@df/root-config": "//localhost:9000/df-root-config.js"
+        "@df/root-config": "//localhost:9000/df-root-config.js",
+        "@df/home-module": "//localhost:8500/df-home-module.js"
       }
     }
   </script>
