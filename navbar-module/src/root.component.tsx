@@ -6,7 +6,7 @@ const Header = styled.header`
   top: 0;
   height: 100px;
   width: 100%;
-  background-color: var(--color-primary);
+  background-color: var(--color-background);
   display: flex;
   align-items: center;
 

@@ -18,6 +18,7 @@ body {
 }
 #content {
   max-width: 1200px;
+  display: block;
   margin: 0 auto;
-  padding: 0 20px;
+  margin-top: 120px;
 }

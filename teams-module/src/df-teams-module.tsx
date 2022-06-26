@@ -14,3 +14,6 @@ const lifecycles = singleSpaReact({
 });
 
 export const { bootstrap, mount, unmount } = lifecycles;
+
+export { default as ListTeams } from "./components/ListChooseTeam";
+

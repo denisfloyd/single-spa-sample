@@ -50,7 +50,8 @@
       "imports": {
         "@df/root-config": "//localhost:9000/df-root-config.js",
         "@df/navbar-module": "//localhost:8500/df-navbar-module.js",
-        "@df/teams-module": "//localhost:8501/df-teams-module.js"
+        "@df/teams-module": "//localhost:8501/df-teams-module.js",
+        "@df/users-module": "//localhost:8502/df-users-module.js"
       }
     }
   </script>
@@ -77,6 +78,10 @@
         <application name="@df/navbar-module"></application>
       </nav>
       <div id="content">
+        <route path="users">
+          <application name="@df/users-module"></application>
+        </route>
+        <redirect from="/teams" to="/"></redirect>
         <route default>
           <application name="@df/teams-module"></application>
         </route>
