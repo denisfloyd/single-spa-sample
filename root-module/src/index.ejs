@@ -49,7 +49,7 @@
     {
       "imports": {
         "@df/root-config": "//localhost:9000/df-root-config.js",
-        "@df/home-module": "//localhost:8500/df-home-module.js",
+        "@df/navbar-module": "//localhost:8500/df-navbar-module.js",
         "@df/teams-module": "//localhost:8501/df-teams-module.js"
       }
     }
@@ -71,12 +71,10 @@
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
   <% } %>
 
-  <link rel="stylesheet" href="./styles/global.css">
-
   <template id="single-spa-layout">
     <single-spa-router>
       <nav>
-        <application name="@df/home-module"></application>
+        <application name="@df/navbar-module"></application>
       </nav>
       <div id="content">
         <route default>

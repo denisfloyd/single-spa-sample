@@ -5,6 +5,8 @@ import {
 } from "single-spa-layout";
 import { registerApplication, start } from "single-spa";
 
+import "./styles/global.css?modules=false";
+
 const routes = constructRoutes(document.querySelector("#single-spa-layout"));
 const applications = constructApplications({
   routes,
