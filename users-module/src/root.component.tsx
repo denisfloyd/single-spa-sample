@@ -1,13 +1,23 @@
-import Parcel from "single-spa-react/parcel";
-
+import styled from "styled-components";
 import { ListTeams } from "@df/teams-module";
 
+import { Users } from "./utils/users";
+
+const Container = styled.section`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+`;
+
 export default function Root(props) {
-  return <ListTeams />;
+  return (
+    <>
+      <ListTeams />
+
+      <Container>
+        {Users.map((user) => (
+          <span>{user.name}</span>
+        ))}
+      </Container>
+    </>
+  );
 }
-
-// import Parcel from "single-spa-react/parcel";
-
-// export default function Root(props) {
-//   return <Parcel config={() => System.import("@df/teams-module/ListTeams")} />;
-// }
