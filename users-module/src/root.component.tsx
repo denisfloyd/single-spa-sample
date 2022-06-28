@@ -1,12 +1,9 @@
 import styled from "styled-components";
 import { ListTeams } from "@df/teams-module";
 
-import { Users } from "./utils/users";
+import ListChooseUsers from "./components/ListChooseUsers";
 
-const Container = styled.section`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-`;
+const Container = styled.section``;
 
 export default function Root(props) {
   return (
@@ -14,9 +11,7 @@ export default function Root(props) {
       <ListTeams />
 
       <Container>
-        {Users.map((user) => (
-          <span>{user.name}</span>
-        ))}
+        <ListChooseUsers />
       </Container>
     </>
   );
