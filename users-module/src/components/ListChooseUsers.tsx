@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import styled from "styled-components";
 import { Users } from "../utils/users";
 import { UserBox } from "./UserBox";
@@ -19,14 +19,27 @@ interface User {
 }
 
 const ListChooseUsers: React.FC = () => {
-  const [users, setUser] = useState<User[]>(
+  const [users, setUsers] = useState<User[]>(
     Users.map((user) => ({ ...user, checked: false }))
   );
+
+  const handleClickUser = (userId: number) => {
+    setUsers(
+      users.map((user) =>
+        user.id === userId ? { ...user, checked: !user.checked } : user
+      )
+    );
+  };
 
   return (
     <Container>
       {users.map((user) => (
-        <UserBox key={user.id} user={user} selected={user.checked} />
+        <UserBox
+          key={user.id}
+          user={user}
+          selected={user.checked}
+          onClick={handleClickUser}
+        />
       ))}
     </Container>
   );

@@ -1,3 +1,5 @@
+import { ListUsers } from "@df/users-module";
+
 export default function Root(props) {
-  return <section>{props.name} is mounted!</section>;
+  return <section><ListUsers /></section>;
 }
